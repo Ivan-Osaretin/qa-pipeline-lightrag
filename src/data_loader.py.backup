@@ -1,0 +1,22 @@
+﻿"""
+Simple data loader for HotpotQA - Phase 1
+"""
+import json
+from pathlib import Path
+
+class HotpotQADataLoader:
+    def __init__(self, data_dir: str = "data"):
+        self.data_dir = Path(data_dir)
+        self.processed_dir = self.data_dir / "processed"
+    
+    def load_subset(self, subset_name: str = "dev_subset_100") -> list:
+        """Load the processed subset"""
+        subset_path = self.processed_dir / f"{subset_name}.json"
+        
+        if not subset_path.exists():
+            raise FileNotFoundError(f"Subset not found: {subset_path}")
+        
+        with open(subset_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        return data

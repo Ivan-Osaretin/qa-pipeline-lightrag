@@ -1,0 +1,76 @@
+﻿#!/usr/bin/env python
+"""
+Data analysis script for Phase 1
+"""
+import json
+import pandas as pd
+from pathlib import Path
+import matplotlib.pyplot as plt
+
+def analyze_dataset():
+    """Analyze the created dataset."""
+    print("=" * 60)
+    print("PHASE 1 DATA ANALYSIS")
+    print("=" * 60)
+    
+    data_path = Path("data/processed/dev_subset_100.json")
+    
+    if not data_path.exists():
+        print("❌ Dataset not found. Run setup_data.py first.")
+        return
+    
+    # Load data
+    with open(data_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    
+    print(f"📊 Loaded {len(data)} examples")
+    
+    # Create DataFrame for analysis
+    df = pd.DataFrame(data)
+    
+    print("\n📈 Basic Statistics:")
+    print("-" * 40)
+    print(f"Total examples: {len(df)}")
+    print(f"Columns: {list(df.columns)}")
+    
+    # Question type distribution
+    if 'type' in df.columns:
+        type_counts = df['type'].value_counts()
+        print("\n📊 Question Type Distribution:")
+        for qtype, count in type_counts.items():
+            print(f"  {qtype}: {count} ({count/len(df)*100:.1f}%)")
+    
+    # Answer length analysis
+    if 'answer' in df.columns:
+        df['answer_length'] = df['answer'].apply(len)
+        print(f"\n📏 Answer Length:")
+        print(f"  Min: {df['answer_length'].min()} chars")
+        print(f"  Max: {df['answer_length'].max()} chars")
+        print(f"  Avg: {df['answer_length'].mean():.1f} chars")
+    
+    # Context analysis
+    if 'context' in df.columns:
+        df['context_count'] = df['context'].apply(len)
+        print(f"\n📚 Context Paragraphs:")
+        print(f"  Min: {df['context_count'].min()} paragraphs")
+        print(f"  Max: {df['context_count'].max()} paragraphs")
+        print(f"  Avg: {df['context_count'].mean():.1f} paragraphs")
+    
+    # Save sample questions
+    sample_path = Path("data/processed/sample_questions.txt")
+    with open(sample_path, 'w', encoding='utf-8') as f:
+        for i, row in df.head(10).iterrows():
+            f.write(f"Example {i+1}:\n")
+            f.write(f"  Type: {row.get('type', 'N/A')}\n")
+            f.write(f"  Question: {row.get('question', 'N/A')}\n")
+            f.write(f"  Answer: {row.get('answer', 'N/A')}\n")
+            f.write(f"  Contexts: {len(row.get('context', []))}\n")
+            f.write("-" * 50 + "\n")
+    
+    print(f"\n💾 Sample questions saved to: {sample_path}")
+    print("\n" + "=" * 60)
+    print("✅ ANALYSIS COMPLETE")
+    print("=" * 60)
+
+if __name__ == "__main__":
+    analyze_dataset()

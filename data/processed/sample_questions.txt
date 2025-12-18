@@ -1,0 +1,83 @@
+SAMPLE QUESTIONS FROM SUBSET
+==================================================
+
+Example 1:
+  ID: 5ae705725542995703ce8bbc
+  Type: bridge
+  Question: Come from the Heart:was first recorded by an artist that sang what genre of music?
+  Answer: country
+  Level: hard
+--------------------------------------------------
+
+Example 2:
+  ID: 5a75321555429916b0164290
+  Type: bridge
+  Question: What is the title of the person who is Head of the Department of Biological Sciences at the University of Lincoln
+  Answer: Doctor
+  Level: hard
+--------------------------------------------------
+
+Example 3:
+  ID: 5ab85b1755429916710eb041
+  Type: comparison
+  Question: Which mathematician worked with algebraic geometry instead of probability theory, Askold Khovanskii or Andrey Kolmogorov?
+  Answer: Askold Georgievich Khovanskii
+  Level: hard
+--------------------------------------------------
+
+Example 4:
+  ID: 5a88b3b4554299206df2b336
+  Type: comparison
+  Question: What type of art does The Consul and Arlecchino have in common?
+  Answer: music
+  Level: hard
+--------------------------------------------------
+
+Example 5:
+  ID: 5ab85a1155429934fafe6d7c
+  Type: comparison
+  Question: Are both Rutgers University and Carnegie Mellon University located in America?
+  Answer: yes
+  Level: hard
+--------------------------------------------------
+
+Example 6:
+  ID: 5a8de5d55542995085b3734d
+  Type: comparison
+  Question: Are Even and Incubus known for their skill in classical music?
+  Answer: no
+  Level: hard
+--------------------------------------------------
+
+Example 7:
+  ID: 5addffff5542992200553bdd
+  Type: bridge
+  Question: How many Academy Awards did the film, in which Jimmy Bryant provided the singing voice for the character Tony, win ?
+  Answer: 10
+  Level: hard
+--------------------------------------------------
+
+Example 8:
+  ID: 5a7555215542996c70cfaee1
+  Type: comparison
+  Question: Which came to market first, "Hey Pa! There's a Goat on the Roof" or "Poleconomy"
+  Answer: Hey Pa! There's a Goat on the Roof
+  Level: hard
+--------------------------------------------------
+
+Example 9:
+  ID: 5abf12f25542997719eab667
+  Type: comparison
+  Question: Are McFarland, USA and The Black Hole both sports films?
+  Answer: no
+  Level: hard
+--------------------------------------------------
+
+Example 10:
+  ID: 5a8fae205542997ba9cb32ec
+  Type: bridge
+  Question:  What type of television show did Dylan Everett star in, in 2015?
+  Answer: American-Canadian mystery-drama
+  Level: hard
+--------------------------------------------------
+
