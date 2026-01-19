@@ -2,3 +2,6 @@
 venv/
 *.pyc
 data/raw/*.json
+.env
+.env
+.env

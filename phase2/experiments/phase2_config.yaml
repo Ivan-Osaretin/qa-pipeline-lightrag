@@ -1,0 +1,43 @@
+# LightRAG Phase 2 Configuration
+experiment:
+  name: "lightrag-phase2-implementation"
+  version: "1.0"
+  author: "Ivan Osaretin (Eribo)"
+  date: "2025-12-17"
+
+# Data Configuration
+data:
+  subset_file: "data/processed/dev_subset_100.json"
+  chunk_size: 1200  # tokens (as per LightRAG paper)
+  chunk_overlap: 200
+  max_chunks: 100
+
+# LLM Configuration (OPTIONAL - can be disabled)
+llm:
+  enabled: true  # Set to false for rule-based only
+  model: "gpt-4o-mini"
+  temperature: 0.1
+  max_tokens: 500
+  
+# Entity Extraction
+entity_extraction:
+  use_spacy: true
+  entity_types: ["PERSON", "ORG", "GPE", "DATE", "EVENT"]
+  min_entity_length: 2
+  max_entity_length: 50
+
+# Graph Construction
+graph:
+  relationship_threshold: 0.5
+  save_path: "data/indices/knowledge_graph.pkl"
+
+# Retrieval
+retrieval:
+  low_level_top_k: 5
+  high_level_top_k: 3
+  embedding_model: "all-MiniLM-L6-v2"
+
+# Evaluation
+evaluation:
+  metrics: ["exact_match", "f1_score", "supporting_fact_recall"]
+  sample_size: 50
