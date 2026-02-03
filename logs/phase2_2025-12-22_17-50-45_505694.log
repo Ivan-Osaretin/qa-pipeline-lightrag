@@ -1,0 +1,7 @@
+2025-12-22 17:52:00.372 | INFO     | __main__:main:31 - ✅ All imports successful
+2025-12-22 17:52:00.403 | INFO     | __main__:main:46 - 
+============================================================
+2025-12-22 17:52:00.406 | INFO     | __main__:main:47 - 1. 📂 LOADING PHASE 1 DATA
+2025-12-22 17:52:00.406 | INFO     | __main__:main:48 - ============================================================
+2025-12-22 17:52:00.452 | INFO     | __main__:main:53 - ✅ Loaded 100 examples from HotpotQA
+2025-12-22 17:52:00.456 | ERROR    | __main__:main:61 - ❌ Failed to load data: 'dict' object has no attribute 'question'

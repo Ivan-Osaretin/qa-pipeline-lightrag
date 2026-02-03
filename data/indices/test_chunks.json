@@ -1,0 +1,14 @@
+[
+  {
+    "chunk_id": "chunk_1",
+    "text": "Askold Khovanskii is a mathematician specializing in algebraic geometry.",
+    "question": "Which mathematician worked with algebraic geometry?",
+    "answer": "Askold Khovanskii"
+  },
+  {
+    "chunk_id": "chunk_2",
+    "text": "Music is an art form that includes classical, jazz, and other genres.",
+    "question": "What type of art is common between The Consul and Arlecchino?",
+    "answer": "music"
+  }
+]

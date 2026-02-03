@@ -1,0 +1,6 @@
+﻿# LightRAG Graph File
+# Created: 2025-12-22
+# Status: Minimal graph structure
+# Nodes: 0 (to be populated in Phase 3)
+# Edges: 0
+# Type: Knowledge graph for HotpotQA
